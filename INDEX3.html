@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyFix - Tienda de Maquillaje</title>
+    <link rel="stylesheet" href="ESTILO3.CSS">
+</head>
+<body>
+    <header>
+        <h1>BeautyFix - Tienda de Maquillaje</h1>
+    </header>
+
+    <section id="productos">
+        <h2>Escoge tu producto</h2>
+        <div class="producto">
+            <h3>Labial Rosa</h3>
+            <p>Precio: S/35.00</p>
+            <img src="labial.jpg" alt="Labial Rosa">
+            <button onclick="agregarAlCarrito('Labial Rosa', 35.00)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Suero Facial</h3>
+            <p>Precio: S/120.00</p>
+            <img src="suero.jpg" alt="Suero Facial">
+            <button onclick="agregarAlCarrito('Suero Facial', 120.00)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Sombra Intense</h3>
+            <p>Precio: S/95.00</p>
+            <img src="sombra-cafe.jpg" alt="Sombra Intense">
+            <button onclick="agregarAlCarrito('Sombra Intense', 95.00)">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Tinta Labial</h3>
+            <p>Precio: S/20.00</p>
+            <img src="tinta labial.jpg" alt="Tinta Labial">
+            <button onclick="agregarAlCarrito('Tinta Labial', 20.00)">Añadir al carrito</button>
+        </div>
+    </section>
+
+    <footer>
+        <a href="carrito.html">Ir al carrito</a>
+        <p>&copy; 2024 A.R V.N.</p>
+    </footer>
+
+    <script>
+        function agregarAlCarrito(nombre, precio) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            let productoExistente = carrito.find(item => item.nombre === nombre);
+
+            if (productoExistente) {
+                productoExistente.cantidad += 1;
+            } else {
+                carrito.push({ nombre: nombre, precio: precio, cantidad: 1 });
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            alert(nombre + " añadido al carrito");
+        }
+    </script>
+    <p></p>
+        <a href="INDEX4.html"><button>Escoger productos</button></a>
+    </p>
+</body>
+</html>

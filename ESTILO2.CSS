@@ -1,0 +1,25 @@
+header{
+    background-color:#ff5e78;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.conteiner{
+    display: flex;
+    justify-content: center;
+}
+.conteiner img{
+    width: 350px;
+    height: 250px;
+    margin: 0 20px;
+}
+.sub{
+    display: flex;
+    justify-content: center;
+}
+.sub h5{
+    margin: 0 150px;
+}

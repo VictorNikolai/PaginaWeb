@@ -1,0 +1,45 @@
+header{
+    background-color:#ff5e78;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav img{
+    margin: 0;
+    padding: 0;
+}
+p{
+    text-align: center;
+}
+.conteiner{
+    display: flex;
+    justify-content: center;
+}
+.conteiner img{
+    width: 350px;
+    height: 250px;
+    margin: 0 20px;
+}
+.sub{
+    display: flex;
+    justify-content: center;
+}
+.sub h5{
+    margin: 0 140px;
+}
+.conteiner2{
+    display: flex;
+    justify-content: center;
+}
+.conteiner2 img{
+    width: 350px;
+    height: 250px;
+    margin: 0 20px;
+}
+.sub2{
+    display: flex;
+    justify-content: center;
+}
+.sub2 h5{
+    margin: 0 140px;
+}
